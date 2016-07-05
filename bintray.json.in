@@ -2,7 +2,7 @@
     "package": {
         "name": "consul-template",
         "repo": "deb",
-        "subject": "EvanKrall",
+        "subject": "evankrall",
         "desc": "consul-template",
         "website_url": "https://github.com/hashicorp/consul-template",
         "issue_tracker_url": "https://github.com/hashicorp/consul-template/issues",
