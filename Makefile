@@ -1,7 +1,7 @@
 VERSION ?= 0.15.0
 PACKAGE_PATH = dist/consul-template_$(VERSION)_amd64.deb
 
-itest_trusty: $(PACKAGE_PATH)
+itest_%: $(PACKAGE_PATH)
 	true
 
 $(PACKAGE_PATH):
@@ -10,5 +10,5 @@ $(PACKAGE_PATH):
 	docker cp blurp:/dist/ ./
 	docker rm blurp; docker rmi blurp
 
-bintray.json: bintray.json.in Makefile
+bintray.json: bintray.json.in Makefile itest_trusty itest_xenial
 	jq 'setpath(["version", "name"]; "$(VERSION)")' $< > $@
