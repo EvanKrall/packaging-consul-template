@@ -22,7 +22,7 @@
 
     "files":
         [
-        {"includePattern": "dist/(.*)", "uploadPattern": "$1"}
+        {"includePattern": "dist/(.*)", "uploadPattern": "$1", "matrixParams": { "deb_distribution": "trusty", "deb_component": "main", "deb_architecture": "amd64"} }
         ],
     "publish": true
 }
